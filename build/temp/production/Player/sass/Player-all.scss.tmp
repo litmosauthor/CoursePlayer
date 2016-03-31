@@ -1,5 +1,5 @@
 $app-name:  dynamic( 'Player' );
-$image-search-path: 'C:/data/www/sandbox/ExtPlayer/build/production/Player/iconicModern/resources';
+$image-search-path: '/Users/stevenhancock/Products/HTML5Style/build/production/Player/iconicModern/resources';
 $theme-name:  dynamic( 'modern-iconic' );
 $include-ext-abstractcomponent: dynamic(false);;
 $include-ext-abstractmanager: dynamic(false);;

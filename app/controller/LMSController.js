@@ -30,6 +30,7 @@ Ext.define('Player.controller.LMSController', {
         break;
       case 'SCORM1.2':
         me.self.mixin('SCORM12Mixin', Player.controller.SCORM12Mixin);
+  //console.log("HERE");
         break;
       case 'SCORM1.3':
       case 'SCORM2004':

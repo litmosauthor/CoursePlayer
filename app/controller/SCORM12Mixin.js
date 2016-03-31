@@ -61,10 +61,10 @@ Ext.define('Player.controller.SCORM12Mixin', {
     return result;
   },
 
-  RecordInteraction: function(id, type, learner_response, correct, correct_responses, description, weighting, latency, objectives) {
+  /*RecordInteraction: function(id, type, learner_response, correct, correct_responses, description, weighting, latency, objectives) {
     var me = this,
       result;
-
+console.log("learner_response " + learner_response);
     var interactionCount = me.GetValue('cmi.interactions._count');
     if (!interactionCount) {
       interactionCount = 0;
@@ -94,7 +94,7 @@ Ext.define('Player.controller.SCORM12Mixin', {
     }
 
     return result;
-  },
+  },*/
 
   _getInteractionResult: function(correct) {
     if (!isNaN(parseFloat(correct)) && isFinite(correct)) {
@@ -120,21 +120,24 @@ Ext.define('Player.controller.SCORM12Mixin', {
   _recordInteractionCorrectResponse: function(interactionCount, correct_responses, alternateCorrectResponse) {
     var me = this,
       tempResult = true;
-    if (correct_responses != undefined && correct_responses != null && correct_responses != "") {
-      tempResult = me.SetValue("cmi.interactions." + interactionCount + ".correct_responses.0.pattern", correct_responses);
-      if (tempResult == false) {
+
+  console.info("correct_responses --> ",correct_responses," --> ",alternateCorrectResponse);
+    //if (correct_responses !== undefined && correct_responses !== null && correct_responses !== "") {
+      //tempResult = me.SetValue("cmi.interactions." + interactionCount + ".correct_responses.0.pattern", correct_responses);
+      //if (tempResult == false) {
         tempResult = me.SetValue("cmi.interactions." + interactionCount + ".correct_responses.0.pattern", alternateCorrectResponse);
-      }
-    }
+      //}
+   // }
     return tempResult;
   },
 
   _recordInteractionResponse: function(interactionCount, learner_response, alternateResponse) {
     var me = this;
-    var tempResult = me.SetValue("cmi.interactions." + interactionCount + "." + me._learner_response, learner_response);
-    if (tempResult == false) {
+
+    //var tempResult = me.SetValue("cmi.interactions." + interactionCount + "." + me._learner_response, learner_response);
+    //if (tempResult == false) {
       tempResult = me.SetValue("cmi.interactions." + interactionCount + "." + me._learner_response, alternateResponse);
-    }
+    //}
     return tempResult;
   },
 

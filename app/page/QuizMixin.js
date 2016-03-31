@@ -354,6 +354,7 @@ Ext.define('Player.page.QuizMixin', {
         case 'MCH':
         case 'HOIMAGE':
         case 'MC':
+    console.info("recordQuestion - correct response: ",questionRecord.correctResponse);
           var scormResponses = Ext.Array.map(questionRecord.response, function(response, index, items) {
             return SCORM.CreateResponseIdentifier(response.Short, response.Long);
           });

@@ -1,2 +1,2 @@
 // @tag full-page
-// @require C:\data\www\sandbox\ExtPlayer\app.js
+// @require /Users/stevenhancock/Products/HTML5Style/app.js

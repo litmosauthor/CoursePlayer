@@ -117,6 +117,176 @@
         {
             "page": [
                 {
+                    "title": "Quiz",
+                    "pType": "Quiz",
+                    "file": "swfs\/quiz.swf",
+                    "loadPercentage": 0,
+                    "fpsec": 12,
+                    "isTocEntry": true,
+                    "nonNavPage": false,
+                    "completed": false,
+                    "leaf": true,
+                    "bookmark": "swfs\/quiz.swf|0",
+                    "feedback": {
+                        "provide": true
+                    },
+                    "question": [
+                        {
+                            "feedback": {
+                                "provide": true
+                            },
+                            "questionText": {
+                                "#text": "<P style=\"text-align:LEFT\">The sky is blue.<\/P>"
+                            },
+                            "qtype": "TF",
+                            "correctResp": true,
+                            "resetBtn": false,
+                            "overrideFeedback": false,
+                            "tracking": true,
+                            "weight": 1,
+                            "questionId": "8z_xfaxe9i9jvkw",
+                            "tries": 1
+                        },
+                        {
+                            "distractors": {
+                                "distractor": [
+                                    {
+                                        "#text": "The grass is purple."
+                                    },
+                                    {
+                                        "#text": "The grass is orange."
+                                    },
+                                    {
+                                        "#text": "The grass is green.",
+                                        "correct": true
+                                    },
+                                    {
+                                        "#text": "The grass is black."
+                                    }
+                                ],
+                                "randomize": true
+                            },
+                            "feedback": {
+                                "provide": true
+                            },
+                            "questionText": {
+                                "#text": "<P style=\"text-align:LEFT\">What color is the grass?<\/P>"
+                            },
+                            "qtype": "MCH",
+                            "overrideFeedback": false,
+                            "tracking": true,
+                            "weight": 1,
+                            "questionId": "xa4z0exg5ao5kl3",
+                            "tries": 1
+                        },
+                        {
+                            "distractors": {
+                                "distractor": [
+                                    {
+                                        "#text": "Black is at the top of a rainbow."
+                                    },
+                                    {
+                                        "#text": "Purple"
+                                    },
+                                    {
+                                        "#text": "Red"
+                                    },
+                                    {
+                                        "#text": "White is at the bottom."
+                                    },
+                                    {
+                                        "#text": "Green is close to purple."
+                                    }
+                                ],
+                                "randomize": true
+                            },
+                            "feedback": {
+                                "provide": true
+                            },
+                            "questionText": {
+                                "#text": "<P style=\"text-align:LEFT\">Choose all the colors that are a part of a rainbow.<\/P>"
+                            },
+                            "qtype": "MC",
+                            "overrideFeedback": false,
+                            "tracking": true,
+                            "weight": 1,
+                            "questionId": "e_vis_0zbtkje7d",
+                            "tries": 1
+                        },
+                        {
+                            "responses": {
+                                "response": [
+                                    {
+                                        "#text": "Blue",
+                                        "correct": true
+                                    },
+                                    {
+                                        "correct": false
+                                    },
+                                    {
+                                        "correct": false
+                                    },
+                                    {
+                                        "correct": false
+                                    },
+                                    {
+                                        "correct": false
+                                    }
+                                ]
+                            },
+                            "feedback": {
+                                "provide": true
+                            },
+                            "questionText": {
+                                "#text": "<P style=\"text-align:LEFT\">What color is the sky?<\/P>"
+                            },
+                            "qtype": "FB",
+                            "exactMatch": false,
+                            "caseSensitive": false,
+                            "otherRespCorrect": false,
+                            "overrideFeedback": false,
+                            "tracking": true,
+                            "weight": 1,
+                            "questionId": "hxtcckhcwctsna6",
+                            "tries": 1
+                        }
+                    ],
+                    "includeIntro": true,
+                    "intro": "intro",
+                    "quizmode": "review",
+                    "randomize": false,
+                    "showresults": true,
+                    "reportScore": true,
+                    "incReview": false,
+                    "incRetakeButton": false,
+                    "number_questions": false,
+                    "recordStatus": "passFail",
+                    "minscore": 0,
+                    "maxscore": 100,
+                    "passComplete": false,
+                    "failIncomplete": false,
+                    "print_results": false,
+                    "email_results": false,
+                    "useServer": false,
+                    "serverURL": "https:\/\/demo.litmosauthor.com\/email\/sendEmail\/",
+                    "LMS_name": false,
+                    "incQuizTitle": false,
+                    "numquestions": 4,
+                    "useSubset": false,
+                    "passingScore": 45,
+                    "tries": 1
+                }
+            ],
+            "title": "Quiz",
+            "objectiveId": "none",
+            "nav": "unrestricted",
+            "showTopicPages": true,
+            "leaf": false,
+            "topicId": 1
+        },
+        {
+            "page": [
+                {
                     "popup_title": {
                         "#text": "Asking the Right Questions"
                     },

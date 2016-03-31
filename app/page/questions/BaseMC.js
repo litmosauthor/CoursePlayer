@@ -47,7 +47,7 @@ Ext.define('Player.page.questions.BaseMC', {
     if (cfg.distractors.randomize) {
       distractorList = randomizeArray(distractorList);
     }
-
+console.info("BaseMC-->refreshQuestionList: ",correctResponse);
     // Update Store Refrence
     cfg.questionRecord.correctResponse = correctResponse;
 

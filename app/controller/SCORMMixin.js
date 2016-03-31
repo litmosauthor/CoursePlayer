@@ -221,7 +221,7 @@ Ext.define('Player.controller.SCORMMixin', {
 	RecordInteraction: function(id, type, learner_response, correct, correct_responses, description, weighting, latency, objectives, time, alternateResponse, alternateCorrectResponse) {
 		var me = this,
 			result;
-
+console.info("correct_responses: ",correct_responses," --> ",alternateCorrectResponse);
 		var interactionCount = me.GetValue('cmi.interactions._count');
 		if (!interactionCount) {
 			interactionCount = 0;
@@ -261,7 +261,7 @@ Ext.define('Player.controller.SCORMMixin', {
 	RecordTrueFalseInteraction: function(id, learner_response, correct, correct_responses, description, weighting, latency, objectives, time) {
 		var me = this,
 			responseString = '',
-			correctResponseString = null
+			correctResponseString = null,
 			learnerResponse = learner_response[0];
 
 		if (learnerResponse && learnerResponse.Long.toLowerCase() == me._t) {
@@ -271,10 +271,29 @@ Ext.define('Player.controller.SCORMMixin', {
 		} else {
 			responseString = '';
 		}
+//Check for short version
+		if (responseString === '') {
+			if (learnerResponse && learnerResponse.Short.toLowerCase() == me._t) {
+				responseString = me._t;
+			} else if (learnerResponse && learnerResponse.Short.toLowerCase() == me._f) {
+				responseString = me._f;
+			} else {
+				responseString = '';
+			}
+		}
+
 		if (correct_responses[0].Long.toLowerCase() == me._t) {
 			correctResponseString = me._t;
 		} else if (correct_responses[0].Long.toLowerCase() == me._f) {
 			correctResponseString = me._f;
+		}
+//Check for short version
+		if (correctResponseString === null) {
+			if (correct_responses[0].Short.toLowerCase() == me._t) {
+				correctResponseString = me._t;
+			} else if (correct_responses[0].Short.toLowerCase() == me._f) {
+				correctResponseString = me._f;
+			}
 		}
 
 		return me.RecordInteraction(id, 'true-false', responseString, correct, correctResponseString, description, weighting, latency, objectives, time, responseString, correctResponseString);
@@ -295,7 +314,7 @@ Ext.define('Player.controller.SCORMMixin', {
 		var alternateCorrectResponse = correct_responses.map(function(response) {
 			return response.Short;
 		}).join(',');
-
+console.info("RecordMultipleChoiceInteraction: ",correct_responses);
 		return me.RecordInteraction(id, 'choice', responseString, correct, correctResponseString, description, weighting, latency, objectives, time, altResponseString, alternateCorrectResponse);
 	},
 
